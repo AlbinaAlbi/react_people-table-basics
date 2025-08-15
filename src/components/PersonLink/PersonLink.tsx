@@ -7,10 +7,6 @@ interface PersonLinkProps {
 }
 
 export const PersonLink: React.FC<PersonLinkProps> = ({ name, people }) => {
-  if (!name) {
-    return <>-</>;
-  }
-
   const person = people.find(p => p.name === name);
 
   if (!person) {
